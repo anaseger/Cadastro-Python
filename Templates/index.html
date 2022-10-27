@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Cadastro</title>
+</head>
+<body style=" background-color: rgb(32, 31, 31);font-family: 'Roboto', sans-serif; padding: 0; margin: 0;">
+    <header style="position: absolute;top: 0;z-index: 10;width: 100%; ">
+        <nav style=" display: flex;margin-top: 20px;justify-content: space-around;align-items: center; ">
+            <img id="logo" style="width: 50px;" src="https://cdn-icons-png.flaticon.com/512/4856/4856456.png" alt="" style="">
+            <a style="  color: white;  text-decoration: none;font-size: 20px;margin: 10px 0px;" href="/inicio">Início</a>
+            <a style="  color: white;  text-decoration: none;font-size: 20px;margin: 10px 0px;" href="/inicio">Sobre nós</a>
+            <a style="  color: white;  text-decoration: none;font-size: 20px;margin: 10px 0px;" href="/">Contato</a>
+        </nav>
+    </header>
+    <form style="    display: flex; flex-direction: column; align-items: center;margin-top: 100px;color: white;background-color: rgba(0, 0, 0, 0.664);padding:50px;" action="/add_text" method="POST">
+        <label for="textv" style="margin-bottom: 10px;">Nome</label>
+        <input type="text" id="textv" name="textv" value="" placeholder="Digite seu nome..." style="    background-color: rgba(243, 243, 243, 0.76) ;color: black;margin-bottom: 10px;padding:5px;">
+        <label for="texti" style="margin-bottom: 10px;">Idade</label>
+        <input type="text" id="textu" name="textu" value="" placeholder="Digite sua idade..." style="    background-color: rgba(243, 243, 243, 0.76) ;color: black;margin-bottom: 10px;padding:5px;">
+        <input style="background-color: orangered; color:white; padding:5px 10px; border-radius:8px; margin-top:10px;" type="submit" value="Enviar"> 
+   </form>
+   <br><br><hr>
+   <ul>
+        {% for text in all_text %}
+        <li> {{ text }} </li>
+        {% endfor %}
+   </ul>
+   <footer style="  background-color: rgba(0, 0, 0, 0.233);  color: white; margin-top: auto; text-align: center; padding-bottom: 25px; ;padding-top: 30px;">
+        <div class="menu2" style="margin-bottom: 10px;" >
+            <a href="" style="    text-decoration: none;font-size: 14px;line-height: 22px;color: #767676;margin: 10px 25px;font-weight: 600;">Cookies</a>
+            <a href="" style="    text-decoration: none;font-size: 14px;line-height: 22px;color: #767676;margin: 10px 25px;font-weight: 600;">Politíca de Privacidade</a>
+            <a href="" style="    text-decoration: none;font-size: 14px;line-height: 22px;color: #767676;margin: 10px 25px;font-weight: 600;">Termos e Condições de Uso</a>
+            <a href="" style="    text-decoration: none;font-size: 14px;line-height: 22px;color: #767676;margin: 10px 25px;font-weight: 600;">FAQs</a>
+        </div>
+        <div class="apps" style="    display: flex;flex-wrap: wrap;align-items: center;flex-direction: row;justify-content: center">
+            <a href="https://www.instagram.com/"><img style="    width: 30px;margin: 15px 25px;" src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" alt=""></a>
+            <a href="https://www.facebook.com/"><img style="    width: 30px;margin: 15px 25px;" src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt=""></a>
+            <a href="https://www.youtube.com/"><img style="    width: 30px;margin: 15px 25px;" src="https://cdn-icons-png.flaticon.com/512/1384/1384012.png" alt=""></a>
+            <p>Lorem ipsum dolor sit amet, consectetur® adipisicing elit. Harum cum tempore perspiciatis reiciendis® quibusdam dolorem dicta ipsam soluta minus illum quis, et sint, autem exercitationem recusandae culpa consectetur laudantium unde!</p>
+        </div>
+    </footer>
+</body>
+</html>
